@@ -1,0 +1,23 @@
+<h1>Update Employee</h1>
+
+<form (ngSubmit)="onsubmit()">
+    <div class="form-group ">
+      <input type="email"  [(ngModel)]="emps.firstname" name="firstname" class="form-control" id="exampleInputEmail1"  placeholder="Enter First Name">
+      
+    </div> <br>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="emps.lastname" name="lastname" class="form-control" id="exampleInputPassword1" placeholder="Enter Last Name">
+    </div> <br>
+
+    <div class="form-group">
+        <input type="text" [(ngModel)]="emps.email_id" name="email_id" class="form-control" id="exampleInputPassword1" placeholder="Enter email">
+      </div> <br>
+
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="emps.phone_number" name="phone_number" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone Number">
+      </div> <br>
+
+   
+    <button type="submit" class="btn btn-primary">Submit</button> <br>
+  </form>

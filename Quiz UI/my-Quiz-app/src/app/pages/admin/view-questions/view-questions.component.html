@@ -1,0 +1,35 @@
+<h1>Welcome to {{title}}</h1>
+<h2>Start your journey!!</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button mat-raised-button [routerLink]="'/admin/questions/add/'+qId +'/'+title" color="primary" style="margin-left: 85%;" class="mb10">Add Questions.</button> 
+            <mat-card *ngFor="let q of questions; let i = index;">
+                <mat-card-content >
+                    <p>Q.{{1+i}}) &nbsp; {{q.content}}</p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                a) {{q.option1}}
+                            </div>
+                            <div class="col-md-6">
+                                b) {{q.option2}}
+                            </div> 
+                            <div class="col-md-6">
+                                a) {{q.option3}}
+                            </div>
+                            <div class="col-md-6">
+                                b) {{q.option4}}
+                            </div>
+                        </div> <br>
+                        <mat-divider></mat-divider>
+                        <b>Correct Answer- {{q.answer}}</b>
+                    </div> <br>
+                    <button mat-raised-button color="primary" (click)="deletequestn(q.quesId)">Delete</button> &nbsp;
+                    <button  mat-raised-button color="primary">Update</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
