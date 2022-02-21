@@ -40,6 +40,9 @@ import { InstructionsComponent } from './pages/user/instructions/instructions.co
 import { StartComponent } from './pages/user/start/start.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgxUiLoaderModule,NgxUiLoaderHttpModule  } from "ngx-ui-loader";
+import { ViewBlogComponent } from './pages/user/view-blog/view-blog.component';
+import { OpenContentComponent } from './pages/user/open-content/open-content.component';
+import { ArmyquestionsComponent } from './pages/user/armyquestions/armyquestions.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,10 @@ import { NgxUiLoaderModule,NgxUiLoaderHttpModule  } from "ngx-ui-loader";
     UsersidebarComponent,
     LoadQuizComponent,
     InstructionsComponent,
-    StartComponent
+    StartComponent,
+    ViewBlogComponent,
+    OpenContentComponent,
+    ArmyquestionsComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@
                           {{q.description}}
                         </p>
                         </mat-card-content>
-                            <button mat-button  mat-raised-button color="primary">view</button> &nbsp;
+                            <button mat-button  mat-raised-button color="primary" [routerLink]="'/blogs'">view</button> &nbsp;
                             <button mat-button  mat-raised-button [routerLink]="'/user-dashboard/instruction/'+q.qId" color="primary">Start</button>
                             <button mat-button disabled>Marks-{{q.maxMarks}}</button>
                             <button mat-button style="margin-left: -10px;" disabled>Que-{{q.numberOfQuestions}}</button>            

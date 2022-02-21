@@ -1,0 +1,46 @@
+<!-- {{amryques | json}} -->
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="col-md-2">
+            </div>
+            <div class="col-md-10">
+                <mat-card *ngFor="let q of amryques; let i = index">
+                    <mat-card-header>
+                        <mat-card-title>
+
+                        </mat-card-title>
+                        <mat-card-content>
+                            <b>
+                            <p> Q.{{i+1}} {{q.question}}</p>
+                            <p>{{q.hindi}}</p>
+                        </b>
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <b>a)</b>  {{q.option1}}   
+                                </div>
+                                <div class="col-md-6" >
+                                    <b>b)</b> {{q.option2}}
+                                </div>
+                            </div>
+                            &nbsp; &nbsp;
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <b>c)</b> {{q.option3}}
+                                </div>
+                                <div class="col-md-6">
+                                    <b>d)</b> {{q.option4}}
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <br>
+                            <b>Ans. {{q.correct}}</b>
+                        </mat-card-content>
+                        
+
+                    </mat-card-header>
+                </mat-card>
+            </div>
+        
+    </div>
+</div>

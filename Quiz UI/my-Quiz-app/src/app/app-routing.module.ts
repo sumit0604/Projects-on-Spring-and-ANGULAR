@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import ArmyQuestion from './Datasets_of_questions/ArmyDataset';
 import { HeaderComponent } from './components/header/header.component';
 import { AddComponentComponent } from './pages/admin/add-component/add-component.component';
 import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
@@ -15,10 +16,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfilesComponent } from './pages/profiles/profiles.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ArmyquestionsComponent } from './pages/user/armyquestions/armyquestions.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { OpenContentComponent } from './pages/user/open-content/open-content.component';
 import { StartComponent } from './pages/user/start/start.component';
 import { UsercomponentComponent } from './pages/user/usercomponent/usercomponent.component';
+import { ViewBlogComponent } from './pages/user/view-blog/view-blog.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
 
@@ -70,10 +74,19 @@ const routes: Routes = [
   }
 
 ]}
+
 ,{
   path:'start/:qid',component:StartComponent,canActivate:[NormalGuard]
+},
+{
+  path: 'blogs',component:ViewBlogComponent,canActivate:[NormalGuard]
+},
+{
+  path:'content',component:OpenContentComponent
+},
+{
+  path:'army_question',component:ArmyquestionsComponent
 }
-
 ];
 
 @NgModule({
