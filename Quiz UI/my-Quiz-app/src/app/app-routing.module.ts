@@ -25,6 +25,9 @@ import { UsercomponentComponent } from './pages/user/usercomponent/usercomponent
 import { ViewBlogComponent } from './pages/user/view-blog/view-blog.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
+import { UpscquestionsComponent } from './pages/user/upscquestions/upscquestions.component';
+import { GkquestionsComponent } from './pages/user/gkquestions/gkquestions.component';
+import { PythonquestionsComponent } from './pages/user/pythonquestions/pythonquestions.component';
 
 const routes: Routes = [
   {path:'signup',component:SignupComponent},
@@ -82,11 +85,24 @@ const routes: Routes = [
   path: 'blogs',component:ViewBlogComponent,canActivate:[NormalGuard]
 },
 {
-  path:'content',component:OpenContentComponent
-},
-{
-  path:'army_question',component:ArmyquestionsComponent
+  path:'content',component:OpenContentComponent, children:[
+    {
+      path:'',component:ArmyquestionsComponent
+    },{
+      path:'army_question',component:ArmyquestionsComponent
+    },
+    {
+      path:'upsc_question',component:UpscquestionsComponent
+    },
+    {
+      path:'gk_question',component:GkquestionsComponent
+    },
+    {
+      path:'python_question',component:PythonquestionsComponent
+    }
+  ]
 }
+
 ];
 
 @NgModule({

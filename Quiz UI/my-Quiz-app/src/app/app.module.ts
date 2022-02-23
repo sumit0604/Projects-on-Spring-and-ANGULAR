@@ -43,6 +43,9 @@ import { NgxUiLoaderModule,NgxUiLoaderHttpModule  } from "ngx-ui-loader";
 import { ViewBlogComponent } from './pages/user/view-blog/view-blog.component';
 import { OpenContentComponent } from './pages/user/open-content/open-content.component';
 import { ArmyquestionsComponent } from './pages/user/armyquestions/armyquestions.component';
+import { UpscquestionsComponent } from './pages/user/upscquestions/upscquestions.component';
+import { GkquestionsComponent } from './pages/user/gkquestions/gkquestions.component';
+import { PythonquestionsComponent } from './pages/user/pythonquestions/pythonquestions.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,10 @@ import { ArmyquestionsComponent } from './pages/user/armyquestions/armyquestions
     StartComponent,
     ViewBlogComponent,
     OpenContentComponent,
-    ArmyquestionsComponent
+    ArmyquestionsComponent,
+    UpscquestionsComponent,
+    GkquestionsComponent,
+    PythonquestionsComponent
   ],
   imports: [
     BrowserModule,

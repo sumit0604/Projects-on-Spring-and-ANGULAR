@@ -1,5 +1,5 @@
 <div class="bootstrap-wrapper">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
                 <mat-card style="margin-left: -20px;">
@@ -9,24 +9,31 @@
                         </mat-card-title>
                     </mat-card-header>
                     <mat-card-content>
-                        <h3>Army Questions</h3>
-                        <h3>Army Questions</h3>
-                        <h3>Army Questions</h3>
-                        <h3>Army Questions</h3>
-                        <h3>Army Questions</h3>
-                        <h3>Army Questions</h3>
+                        <button mat-raised-button  [routerLink]="'/content/army_question'">Army question</button>
+                        <button mat-raised-button  [routerLink]="'/content/upsc_question'">UPSC question</button>
+                        <button mat-raised-button  [routerLink]="'/content/gk_question'">Genral Knowledge</button>
+                        <button mat-raised-button  [routerLink]="'/content/python_question'">Python question</button>
+                        <!-- <button mat-raised-button  [routerLink]="'/content/army_question'">Python question</button>
+                        <button mat-raised-button  [routerLink]="'/content/army_question'">Python question</button>
+                        <button mat-raised-button  [routerLink]="'/content/army_question'">Economics question</button> -->
                     </mat-card-content>
                 </mat-card>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <div class="col-md-10" >
 
-                <div class="row">
+                <router-outlet></router-outlet>
+                <button mat-flat-button routerLink="/login" style="margin-left: 27%;">Want to test your knowledge? click me</button>
+
+                <!-- <div class="row">
                     <div class="col-md-3">
                      <mat-card>
                         <mat-card-header>
                         <div mat-card-avatar style="background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');background-size: cover;"></div>
                         <mat-card-title>Army Preperation</mat-card-title>
-                        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                       
                       </mat-card-header>
                       <p>kasdasd asdlkajsssssssssssssssss                 ljasnd lkjkljsadjk</p>
                       <button mat-raised-button [routerLink]="'/army_question'"  color="primary">Open</button>
@@ -37,7 +44,7 @@
                             <mat-card-header>
                             <div mat-card-avatar style="background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');background-size: cover;"></div>
                             <mat-card-title>Army Preperation</mat-card-title>
-                            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                            
                           </mat-card-header>
                           <p>kasdasd asdlkajsssssssssssssssss                 ljasnd lkjkljsadjk</p>
                           <button>Open</button>
@@ -48,7 +55,7 @@
                             <mat-card-header>
                             <div mat-card-avatar style="background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');background-size: cover;"></div>
                             <mat-card-title>Army Preperation</mat-card-title>
-                            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                            
                           </mat-card-header>
                           <p>kasdasd asdlkajsssssssssssssssss                 ljasnd lkjkljsadjk</p>
                           <button>Open</button>
@@ -59,18 +66,29 @@
                             <mat-card-header>
                             <div mat-card-avatar style="background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');background-size: cover;"></div>
                             <mat-card-title>Army Preperation</mat-card-title>
-                            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                            
                           </mat-card-header>
                           <p>kasdasd asdlkajsssssssssssssssss                 ljasnd lkjkljsadjk</p>
                           <button>Open</button>
                          </mat-card>
                     
                     </div>
-                </div>
+                </div> -->
+                
             </div>
+
+            <!-- <div class="col-md-2">
+                ss  
+            </div> -->
+            
         </div>
+        
     </div>
 </div>
+<span></span>
+<span></span> <span></span>
+<span></span>
+<span></span>
 
 
 
