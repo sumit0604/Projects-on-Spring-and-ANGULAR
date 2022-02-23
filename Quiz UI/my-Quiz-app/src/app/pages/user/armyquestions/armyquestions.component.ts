@@ -12,24 +12,29 @@ import * as $ from "jquery";
 })
 export class ArmyquestionsComponent implements OnInit {
 
+  show:boolean=false
   amryques:any;
-  constructor(private route:Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.amryques =  ArmyQuestion;
+    this.randomArrayShuffle(this.amryques)
 
   }
 
   testing(){
-    var name = $("testing").val();
-    alert(name);
+    this.show=!this.show
   }
-  // swal({
-  //   title: "Good job!",
-  //   text: "You clicked the button!",
-  //   icon: "success",
-  //   button: "Aww yiss!"
-  // });
- 
+  randomArrayShuffle(array:any) {
+    var currentIndex = array.length, temporaryValue:any, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
 
 }

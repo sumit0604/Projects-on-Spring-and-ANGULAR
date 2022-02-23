@@ -1,50 +1,53 @@
 <!-- {{amryques | json}} -->
-
+<!-- 
 <button (click)="testing()">Name</button>
-<input type="text" id="testing" />
+<h1 *ngIf="show">This is hidden message</h1> -->
 
-
+<b>
+    <h3>Note: You will see answers at the end of the questions.</h3>
+    <h3>Note: आपको प्रश्नों के अंत में उत्तर दिखाई देंगे।</h3>
+</b>
 <div class="bootstrap-wrapper">
     <div class="container-fluid">
         <div class="col-md-2">
-            </div>
-            <div class="col-md-10">
-                <mat-card *ngFor="let q of amryques; let i = index">
-                    <mat-card-header>
-                        <mat-card-title>
+        </div>
+        <div class="col-md-10">
+            <mat-card *ngFor="let q of amryques; let i = index">
 
-                        </mat-card-title>
-                        <mat-card-content>
-                            <b>
-                            <p> Q.{{i+1}} {{q.question}}</p>
-                            <p>{{q.hindi}}</p>
-                        </b>
-                            <div class="row">
-                                <div class="col-md-6">
-                                  <b>a)</b>  {{q.option1}}   
-                                </div>
-                                <div class="col-md-6" >
-                                    <b>b)</b> {{q.option2}}
-                                </div>
-                            </div>
-                            &nbsp; &nbsp;
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <b>c)</b> {{q.option3}}
-                                </div>
-                                <div class="col-md-6">
-                                    <b>d)</b> {{q.option4}}
-                                </div>
-                            </div>
-                            <mat-divider></mat-divider>
-                            <br>
-                            <b>Ans. {{q.correct}}</b>
-                        </mat-card-content>
-                        
+                <mat-card-title>
 
-                    </mat-card-header>
-                </mat-card>
-            </div>
-        
+                </mat-card-title>
+                <mat-card-content>
+
+                    <b>
+                        <p> Q.{{i+1}} {{q.question}}</p>
+                        <p>{{q.hindi}}</p>
+                    </b>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <b>a)</b> {{q.option1}}
+                        </div>
+                        <div class="col-md-6">
+                            <b>b)</b> {{q.option2}}
+                        </div>
+                    </div>
+                    &nbsp; &nbsp;
+                    <div class="row">
+                        <div class="col-md-6">
+                            <b>c)</b> {{q.option3}}
+                        </div>
+                        <div class="col-md-6">
+                            <b>d)</b> {{q.option4}}
+                        </div>
+                    </div>
+
+                    <mat-divider></mat-divider>
+                    <br>
+                    <b *ngIf="show"> Ans. {{q.correct}}</b>
+                </mat-card-content>
+            </mat-card>
+        </div>
     </div>
+    <button mat-flat-button (click)="testing()" *ngIf="!show" style="margin-left: 36%;">Show answers</button>
+    <button mat-flat-button (click)="testing()" *ngIf="show" style="margin-left: 36%;">Hide answers</button>
 </div>
