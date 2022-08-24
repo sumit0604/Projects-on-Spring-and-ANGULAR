@@ -1,0 +1,23 @@
+<mat-card *ngFor="let q of quizes">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>
+            {{q.title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{q.category.title}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-action>
+        <button mat-raised-button color="primary" [routerLink]="'/admin/questions/'+ q.qId+'/'+ q.title">Questions</button>
+        <button mat-flat-button >Max Marks: {{q.maxMarks}}</button>
+        <button mat-flat-button >Total Number of Questions: {{q.numberOfQuestions}}</button>
+        <button mat-raised-button [routerLink]="'/admin/update/' + q.qId" >Update</button> &nbsp;
+        <button mat-raised-button color="primary">Attempts</button>
+        <button mat-raised-button (click)="deletequizz(q.qId)" color="accent" class="ml10">Delete</button>
+    </mat-card-action>
+</mat-card> <br>
+
+<div class="conatiner" style="margin-left: 30%;">
+    <button routerLink="/admin/add-quiz" mat-raised-button color="accent" > Add Quiz</button>
+</div>
